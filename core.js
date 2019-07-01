@@ -12,7 +12,7 @@ client.commands = new Enmap();
 const prefix = client.prefix;
 const config = client.config;
 const {
-  token //-_____
+  token
 } = config;
 
 const con = mysql.createConnection({
@@ -53,8 +53,7 @@ client.on("ready", () => {
       );
     client.channels.get("592024972776701964").setName(`▪ Economy: 401239`);
   }, 10000);
-}); //ждем пока я его врублю и протестирую
-//сделай ивент на сообщение (обработчик команд из файлов тоже сделай, и их лаунчер __-)
+});
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
